@@ -1,0 +1,1 @@
+Add the pretrained model on this path ie. content/data/LRS3_V_WER19/model.pth,model.json
