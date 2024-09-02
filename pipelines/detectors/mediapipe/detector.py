@@ -23,7 +23,7 @@ class LandmarksDetector:
         landmarks = self.detect(video_frames, self.full_range_detector)
         if all(element is None for element in landmarks):
             landmarks = self.detect(video_frames, self.short_range_detector)
-            assert any(l is not None for l in landmarks), "Cannot detect any frames in the video"
+            assert any(l is not None for l in landmarks), "Cannot detect any face!"
         return landmarks
 
     def detect(self, video_frames, detector):

@@ -3,7 +3,6 @@ from pipelines.pipeline import InferencePipeline
 from divide import video_process_output
 from audioextract import extract_audio,transcribe_audio
 from delete_chunks import delete_chunks
-from difflib import SequenceMatcher
 from sentence_transformers import SentenceTransformer, util
 
 import os
@@ -19,18 +18,15 @@ video_path = 'C:/New folder/new/Visual_Speech_Recognition_for_Multiple_Languages
 audio_path = r"C:\New folder\new\Visual_Speech_Recognition_for_Multiple_Languages\content\chunk_dir_audio\audio.wav" #Path to the extracted audio(created)
 chunk_dir = r'C:\New folder\new\Visual_Speech_Recognition_for_Multiple_Languages\content\chunk_dir' # Directory to save chunks(created)
 
-# # Function to get all video files from a folder
-# def get_video_files(folder_path):
-#     video_files = [f for f in os.listdir(folder_path) if f.endswith('.mp4')]
-#     return video_files
+
 
 
 
 if __name__== "__main__":
- 
- #Pipelineee for video processing
  video_pipeline = InferencePipeline(video_modality, v_model_path, v_model_conf, face_track=True, device="cpu")
- 
+
+# FOR DETECTION OF A VIDEO AND THEN PLAYING:
+#  
 #  for filename in os.listdir(video_path):
 #     if filename.endswith(".mp4"):
 #         video_path = os.path.join(video_path, filename)
