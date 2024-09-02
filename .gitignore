@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.idea/
+*.pyc
+*.tar
+.DS_Store
+.env
+realtimeA.py
+realtimeV.py
+testground.py
+RealTime.py
+content/data/*
+adds/
+content/video/*
+
+
